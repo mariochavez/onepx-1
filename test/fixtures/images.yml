@@ -1,0 +1,14 @@
+# Read about fixtures at
+# http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  category: 1
+  description: MyText
+  tags: MyString
+
+two:
+  name: MyString
+  category: 1
+  description: MyText
+  tags: MyString
