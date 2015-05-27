@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  get '/imagenes' => 'images#index'
+  resources :images, only: [:index, :new, :create], path: '/imagenes'
 end
