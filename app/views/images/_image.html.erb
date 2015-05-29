@@ -1,0 +1,6 @@
+<div class='image-box'>
+  <div class='image-content'>
+    <%= image_tag image.photo.thumb.url %>
+    <h2><%= image.name %><span><%= image.try(:identity).try(:email ) %></span></h2>
+  </div>
+</div>

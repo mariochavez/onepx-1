@@ -15,3 +15,6 @@ es:
       title: 'Nueva %{model}'
       form:
         error: 'Ha ocurrido un error al intentar crear la %{model}'
+
+    create:
+      created: 'La %{model} ha sido creada exitosamente'

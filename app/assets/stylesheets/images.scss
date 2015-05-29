@@ -1,0 +1,43 @@
+.images {
+  overflow: hidden;
+  margin: 10px;
+
+  .image-box {
+    float: left;
+    position: relative;
+    width: 20%;
+    padding-bottom: 20%;
+  }
+
+  .image-content {
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    top: 10px;
+    bottom: 10px;
+    overflow: hidden;
+
+    h2 {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: black;
+      background: rgba(0, 0, 0, 0.2);
+      color: white;
+      padding: 10px;
+      text-align: center;
+      font-weight: lighter;
+      font-size: 1em;
+
+      span {
+        font-size: 0.8em;
+        display: block;
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}

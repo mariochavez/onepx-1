@@ -8,7 +8,20 @@
 </head>
 <body>
 
-<%= yield %>
+  <%- if identity_signed_in? %>
+    <div id='user'>
+      <span>Hola ! <%= current_identity.email %> | </span>
+      <%= link_to 'Cerrar Sesión', log_out_path, method: :delete, confirm: 'Estás seguro de querer cerrar tu sesión?' %>
+    </div>
+  <% end %>
+
+  <div id='flash'>
+    <% flash.each do |key, value| -%>
+      <div id="flash_<%= key %>"><%= value %></div>
+    <% end %>
+  </div>
+
+  <%= yield %>
 
 </body>
 </html>

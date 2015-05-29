@@ -2,28 +2,33 @@
 
 <h1><%= t('.title', model: model_name) %></h1>
 
-<%= form_for @image, builder: CustomFormBuilder do |form| %>
+<%= form_for @image, html: { class: 'pure-form pure-form-aligned' }, builder: CustomFormBuilder do |form| %>
+  <fieldset>
   <%= form.form_error %>
 
-  <div class='field'>
+  <div class='pure-control-group'>
     <%= form.label :name %>
     <%= form.text_field :name %>
     <%= form.field_error :name %>
   </div>
-  <div class='field'>
+  <div class='pure-control-group'>
     <%= form.label :description %>
     <%= form.text_area :description %>
   </div>
-  <div class='field'>
+  <div class='pure-control-group'>
     <%= form.label :category %>
     <%= form.collection_select :category, image_categories, :last, :first %>
   </div>
-  <div class='field'>
+  <div class='pure-control-group'>
     <%= form.label :tags_text %>
     <%= form.text_field :tags_text %>
   </div>
-
-  <div clas='field'>
-    <%= form.submit %>
+  <div class='pure-control-group'>
+    <%= form.label :photo %>
+    <%= form.file_field :photo %>
   </div>
+  <div clas='pure-controls'>
+    <%= form.submit class: 'pure-button pure-button-primary' %>
+  </div>
+  </fieldset>
 <% end %>

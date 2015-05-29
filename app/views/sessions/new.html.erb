@@ -1,0 +1,15 @@
+<%= form_for @identity, url: sessions_path do |form| %>
+  <%- if warden_message %>
+    <div class='alert'><%= warden_message %></div>
+  <% end %>
+
+  <p>
+    <%= form.label :email %><br />
+    <%= form.text_field :email %>
+  </p>
+  <p>
+    <%= form.label :password %><br />
+    <%= form.password_field :password %>
+  </p>
+  <p class='button'><%= form.submit t('.log_in') %></p>
+<% end %>
